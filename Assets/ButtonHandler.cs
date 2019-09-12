@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ButtonHandler : MonoBehaviour
 {
-  //  public   GameObject button;
+ 
   
     public  void Load()
     {

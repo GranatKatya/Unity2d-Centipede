@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// it is additional game object, one more enemy
+/// i don't use it yet 
+/// </summary>
 public class FacesPlayer : MonoBehaviour
 {
   public   float rotSpeed = 180f;

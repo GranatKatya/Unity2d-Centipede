@@ -7,7 +7,7 @@ public class MoveForvard : MonoBehaviour
   public float maxSpeed = 1f;
 
 
-    void Update()
+    void Update() // move forvard
     {
         Vector3 pos = transform.position;
         Vector3 velocity = new Vector3(0,  maxSpeed * Time.deltaTime , 0 );

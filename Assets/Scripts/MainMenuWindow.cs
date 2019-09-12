@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// class for main menu window 
+/// here it's find buttons and bind  actions to it
+/// </summary>
 public class MainMenuWindow : MonoBehaviour
 {
     private Button _button;
@@ -15,10 +19,5 @@ public class MainMenuWindow : MonoBehaviour
         quitbutton.onClick.AddListener(delegate { Application.Quit(); });
     }
 
-    //void Start()
-    //{
-    //    _button = GameObject.Find("Play").GetComponent<Button>();
-    //    _button.onClick.AddListener(delegate { Loader.Load(); });
-    //}
 }
  

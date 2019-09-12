@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// class to manage pause window
+/// bind actions to buttons
+///  and hide some elements
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance;// =  new PauseMenu();
-  //  public  GameObject GameObject;
+ 
 
     private Button resumebutton;
     private Button mainMenu;
-   // void Start() { instance = this; }
+  
     void Awake()
     {
-       instance = this;
-       // GameObject = gameObject;
+       instance = this;    
 
         transform.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         transform.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
@@ -28,35 +32,9 @@ public class PauseMenu : MonoBehaviour
     }
     private void Show() { gameObject.SetActive(true); }
     private void Hide() { gameObject.SetActive(false); }
-   //public static void ShowStatic() { instance.Show(); }
+ 
    public static void HideStatic() { instance.Hide(); }
 
-
-
-    // void Update()
-    //{
-    //    if (Input.GetKey(KeyCode.Escape))
-    //    {
-    //        Debug.Log("______________________________________________--------------------------------------------------------pase");
-    //       // Show();
-    //        Time.timeScale = 0f;
-    //    }
-    //}
-
-
-    //public   void ResumeGame()
-    //{
-    //    // PauseMenu.HideStatic();
-    //   Hide();
-
-    //    Time.timeScale = 1f;
-    //}
-    //public  void PauseGame()//
-    //{
-    //    // PauseMenu.ShowStatic();
-    //    Show();
-    //    Time.timeScale = 0f;
-    //}
 
 
 

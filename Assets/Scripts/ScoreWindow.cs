@@ -3,29 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// window for score and increase it 
+/// and lifes
+/// </summary>
 public class ScoreWindow : MonoBehaviour
 {
     private Text score;
     static int heartCiunt = 3;
-   // private static Image[] hearts;
+ 
     private static Heart[] hearts;
 
-    // Update is called once per frame
+  
 
     void Awake()
     {
-        //hearts = new Image[] { transform.Find("FirstHeart").GetComponent<Image>(), transform.Find("SecondHeart").GetComponent<Image>(), transform.Find("ThrirdHeart").GetComponent<Image>() };
-        hearts = new Heart[] {
+          hearts = new Heart[] {
             new Heart(){ heart =  transform.Find("FirstHeart").GetComponent<Image>(), IsVisible=true} ,
              new Heart(){ heart =  transform.Find("SecondHeart").GetComponent<Image>(), IsVisible=true} ,
               new Heart(){ heart =  transform.Find("ThrirdHeart").GetComponent<Image>(), IsVisible=true} 
         };
 
-        //Debug.Log("Image[] hearts; " + hearts.Length);
-        //Debug.Log("Image[] hearts; " + hearts[0].heart);
-        //Debug.Log("Image[] hearts; " + hearts[1].heart);
-        //// hearts[1].heart.enabled = false;    
-        //Debug.Log("Image[] hearts; " + hearts[2].heart);
+      
         score = transform.Find("scoretext").GetComponent<Text>();
     }
     private void Update() {

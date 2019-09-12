@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class DamagedByCollision : MonoBehaviour
 {
-    //void OnCollisionEnter2D()
-    //{
-    //    Debug.Log("Collision!");
-    //}
-    
-
+  
     public  int health = 1;
 
-    public float invulnPeriod = 0;
+    public float invulnPeriod = 0;// can use it to do object Unbreakable
     float invulnTimer = 0;
     int correctLayer;// need to save first obj layer
 
@@ -24,16 +19,15 @@ public class DamagedByCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D o)
     { 
       Debug.Log("Trigger!");
-        //    if (invuln<=0)
-        // {
-        if (o.gameObject.tag != "mushroom")
+      
+        if (o.gameObject.tag != "mushroom")  // if object collide with another that has tag mushroom
         {
             Debug.Log("!p4!");
             health--;
             invulnTimer = invulnPeriod;// 0.5f;
             gameObject.layer = 10; //  can't die
         }
-        //}   
+      
     }
 
     void Update()
@@ -44,12 +38,12 @@ public class DamagedByCollision : MonoBehaviour
             gameObject.layer = correctLayer; // can die
         }
 
-        if (health <= 0)
+        if (health <= 0)// object die if it doesn't have ani lifes
         {
             Die();
         }
     }
-    void Die()
+    void Die() // destroy gameobject
     {
         Destroy(gameObject);
     }
